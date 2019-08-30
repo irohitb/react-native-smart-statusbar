@@ -1,0 +1,33 @@
+{
+  "name": "react-native-smart-statusbar",
+  "version": "1.0.0",
+  "description": "The smart status bar for react-native that intelligently handles safe area across iOS and Android, background color etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irohitb/react-native-smart-statusbar.git"
+  },
+  "keywords": [
+    "react-native",
+    "status-bar",
+    "react-native-status-bar",
+    "safe-area",
+    "safearea",
+    "react-native-safe-area"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irohitb/react-native-smart-statusbar/issues"
+  },
+  "homepage": "https://github.com/irohitb/react-native-smart-statusbar#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-native": "^0.60.5",
+    "react-native-device-info": "^2.3.2"
+  }
+}
