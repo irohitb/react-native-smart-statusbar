@@ -12,12 +12,8 @@ class SafeAreaDecider extends PureComponent {
 		navbarHeight: null
 	}
 
-	componentWillMount () {
-		console.log(this.props)
-	}
 
 	componentDidMount = async () => {
-		//Setting up Status Bar height
 		let StatusBarHeight = null
 		const {StatusBarManager} = NativeModules
 		if (Platform.OS === 'ios') {
@@ -30,11 +26,8 @@ class SafeAreaDecider extends PureComponent {
 	}
 
 	render() {
-		//Getting Navbar height
-		const {navbarHeight} = this.state //SafeViewDecider //SafeViewDecider
-		//Checking if the device have notch
+		const {navbarHeight} = this.state 
 		const {backgroundColor, statusBarHiddenForNotch, statusBarHiddenForNonNotch, ...rest} = this.props
-		console.log(navbarHeight, backgroundColor, statusBarHiddenForNotch, statusBarHiddenForNonNotch)
 		if (DeviceInfo.hasNotch()) {
 			return (
 				<View
@@ -52,15 +45,15 @@ class SafeAreaDecider extends PureComponent {
 				</View>
 			)
 		} else if (!DeviceInfo.hasNotch()) {
-			// Device does not have notch
 			return (
 				<View
 					style={{
 						backgroundColor: backgroundColor,
-						width: Dimensions.get('window').width
+						width: Dimensions.get('window').width,
+						height: navbarHeight
 					}}
 				>
-					<StatusBar translucent hidden={this.props.statusBarHiddenForNonNotch} {...rest} />
+					<StatusBar  {...rest} translucent hidden={this.props.statusBarHiddenForNonNotch} />
 				</View>
 			)
 		}
@@ -75,9 +68,7 @@ SafeAreaDecider.propTypes = {
 
 SafeAreaDecider.defaultProps = {
 	statusBarHiddenForNotch: false,
-	statusBarHiddenForNonNotch: true
+	statusBarHiddenForNonNotch: false
 }
 
 export default SafeAreaDecider
-
-// Points to note that ios does not have background color (https://stackoverflow.com/questions/39297291/how-to-set-ios-status-bar-background-color-in-react-native)
