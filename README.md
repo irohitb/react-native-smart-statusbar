@@ -15,7 +15,7 @@ npm i react-native-smart-statusbar
 ## Usage 
 
 ```
-	<SafeAreaViewDecider statusBarHiddenForNotch={true} />
+<SafeAreaViewDecider statusBarHiddenForNotch={true} />
 ```
 
 ## Props 
