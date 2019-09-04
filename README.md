@@ -59,6 +59,7 @@ Result:
  
 
  ### Example 3:  Hidden for non notch with Background color provided 
+ 
 ```
 <SafeAreaViewDecider statusBarHiddenForNonNotch={false} backgroundColor="blue"/>
 ```
