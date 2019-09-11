@@ -28,6 +28,6 @@
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-native": "^0.60.5",
-    "react-native-device-info": "^2.3.2"
+    "react-native-device-info": "^3.0.0"
   }
 }
