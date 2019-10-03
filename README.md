@@ -7,7 +7,8 @@ React Native Provides with Certain Api's whose scope is limited to either iOS or
 
 Basically, It handles safe area and background color across iOS and Android. 
 
-**Note:** Developer of this looking for full time interesting oppertunities, [connect at linkedin](https://www.linkedin.com/in/irohitbh/)
+### Note
+ Developer of this repo looking for full time interesting oppertunities, [connect on linkedin](https://www.linkedin.com/in/irohitbh/)
 
 ## Installation
 

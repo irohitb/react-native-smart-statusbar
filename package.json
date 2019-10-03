@@ -1,6 +1,6 @@
 {
   "name": "react-native-smart-statusbar",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The smart status bar for react-native that intelligently handles safe area across iOS and Android, background color etc",
   "main": "index.js",
   "scripts": {
