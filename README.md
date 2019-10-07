@@ -29,7 +29,7 @@ React-Native-Smart-Status-Bar takes three things as props
 | **Prop** | **Type** | **Default** | **Required** | **description** |
 |----------|----------|-------------|--------------|--------------|
 | statusBarHiddenForNotch | boolean | false | No | Determines if status bar needs to be hidden or not for notch device  |
-| statusBarHiddenForNotch | boolean | false | No | Determines if status bar needs to be hidden or not  for non notch device| 
+| statusBarHiddenForNonNotch | boolean | false | No | Determines if status bar needs to be hidden or not  for non notch device| 
 | backgroundColor | string | null | No |  Adds background color consistent across iOS and Android device for Status bar |
 
 

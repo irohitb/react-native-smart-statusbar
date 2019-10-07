@@ -9,30 +9,35 @@ class SafeAreaDecider extends PureComponent {
 	}
 
 	state = {
-		navbarHeight: null
+		navbarHeight: null,
+		deviceHaveNotch: false,
 	}
 
 	componentDidMount = async () => {
 		let StatusBarHeight = null
 		const {StatusBarManager} = NativeModules
+		const deviceHaveNotch = await DeviceInfo.hasNotch()
+
 		if (Platform.OS === 'ios') {
 			StatusBarHeight = await StatusBarManager.getHeight(statusBarHeight => {
-				this.setState({navbarHeight: statusBarHeight.height})
+				this.setState({navbarHeight: statusBarHeight.height, deviceHaveNotch: deviceHaveNotch})
 			})
 		} else if (Platform.OS === 'android') {
-			this.setState({navbarHeight: StatusBar.currentHeight})
+			console.log(`Platform is Android:`, StatusBar.currentHeight)
+			this.setState({navbarHeight: StatusBar.currentHeight, deviceHaveNotch: deviceHaveNotch})
 		}
 	}
 
 	render() {
-		const {navbarHeight} = this.state
+		const {navbarHeight, deviceHaveNotch} = this.state
 		const {
 			backgroundColor,
 			statusBarHiddenForNotch,
 			statusBarHiddenForNonNotch,
 			...rest
 		} = this.props
-		if (DeviceInfo.hasNotch()) {
+		console.log(deviceHaveNotch)
+		if (deviceHaveNotch) {
 			return (
 				<View
 					style={{
@@ -44,16 +49,20 @@ class SafeAreaDecider extends PureComponent {
 					<StatusBar {...rest} translucent hidden={this.props.statusBarHiddenForNotch} />
 				</View>
 			)
-		} else if (!DeviceInfo.hasNotch()) {
+		} else if (!deviceHaveNotch && Platform.OS === 'ios') {
 			return (
 				<View
 					style={{
 						backgroundColor: backgroundColor,
-						width: Dimensions.get('window').width,
+						width: Dimensions.get('window').width
 					}}
 				>
 					<StatusBar {...rest} translucent hidden={this.props.statusBarHiddenForNonNotch} />
 				</View>
+			)
+		} else if (!deviceHaveNotch && Platform.OS === 'android') {
+			return (
+			<StatusBar {...rest} backgroundColor={backgroundColor} hidden={this.props.statusBarHiddenForNonNotch} />
 			)
 		}
 	}
@@ -71,3 +80,5 @@ SafeAreaDecider.defaultProps = {
 }
 
 export default SafeAreaDecider
+
+// Points to note that ios does not have background color (https://stackoverflow.com/questions/39297291/how-to-set-ios-status-bar-background-color-in-react-native)
