@@ -19,7 +19,6 @@ class SafeAreaDecider extends PureComponent {
 			const iosHeight = deviceHaveNotch ? 44: 20
 			this.setState({navbarHeight: iosHeight, deviceHaveNotch: deviceHaveNotch})
 		} else if (Platform.OS === 'android') {
-			console.log(`Platform is Android:`, StatusBar.currentHeight)
 			this.setState({navbarHeight: StatusBar.currentHeight, deviceHaveNotch: deviceHaveNotch})
 		}
 	}
@@ -32,7 +31,6 @@ class SafeAreaDecider extends PureComponent {
 			statusBarHiddenForNonNotch,
 			...rest
 		} = this.props
-		console.log(navbarHeight)
 		if (deviceHaveNotch) {
 			return (
 				<View
