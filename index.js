@@ -14,14 +14,10 @@ class SafeAreaDecider extends PureComponent {
 	}
 
 	componentDidMount = async () => {
-		let StatusBarHeight = null
-		const {StatusBarManager} = NativeModules
 		const deviceHaveNotch = await DeviceInfo.hasNotch()
-
 		if (Platform.OS === 'ios') {
-			StatusBarHeight = await StatusBarManager.getHeight(statusBarHeight => {
-				this.setState({navbarHeight: statusBarHeight.height, deviceHaveNotch: deviceHaveNotch})
-			})
+			const iosHeight = deviceHaveNotch ? 44: 20
+			this.setState({navbarHeight: iosHeight, deviceHaveNotch: deviceHaveNotch})
 		} else if (Platform.OS === 'android') {
 			console.log(`Platform is Android:`, StatusBar.currentHeight)
 			this.setState({navbarHeight: StatusBar.currentHeight, deviceHaveNotch: deviceHaveNotch})
@@ -36,7 +32,7 @@ class SafeAreaDecider extends PureComponent {
 			statusBarHiddenForNonNotch,
 			...rest
 		} = this.props
-		console.log(deviceHaveNotch)
+		console.log(navbarHeight)
 		if (deviceHaveNotch) {
 			return (
 				<View
@@ -76,7 +72,8 @@ SafeAreaDecider.propTypes = {
 
 SafeAreaDecider.defaultProps = {
 	statusBarHiddenForNotch: false,
-	statusBarHiddenForNonNotch: false
+	statusBarHiddenForNonNotch: false,
+	
 }
 
 export default SafeAreaDecider
