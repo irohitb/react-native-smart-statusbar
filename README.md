@@ -13,8 +13,19 @@ Basically, It handles safe area and background color across iOS and Android.
 ## Installation
 
 ```
+npm i react-native-device-info
 npm i react-native-smart-statusbar
 ```
+
+#### For IOS 
+
+```
+cd ios
+pod install
+``` 
+
+for people using RN <= 0.59, please read the installation instruction from `react-native-device-info` [repo](https://github.com/react-native-community/react-native-device-info)
+
 
 ## Usage 
 
@@ -72,3 +83,8 @@ Result:
 
 <img width="337" alt="Screenshot 2019-09-03 at 12 50 39 PM" src="https://user-images.githubusercontent.com/32276134/64152071-73aa8400-ce49-11e9-97eb-761d1d0bdd35.png">
 
+
+
+### Recent changes 
+
+1. Check changelog.md for all the changes
