@@ -1,7 +1,9 @@
 # React-Native-Smart-Status-Bar 
 
-
-[![NPM](https://nodei.co/npm/react-native-smart-statusbar.png?compact=true)](https://nodei.co/npm/react-native-smart-statusbar/)
+|  | Status |
+| - | - |
+| Dependencies | [![Dependencies](https://img.shields.io/david/irohitb/react-native-smart-statusbar)](https://david-dm.org/irohitb/react-native-smart-statusbar) [![Dev dependencies](https://img.shields.io/david/dev/irohitb/react-native-smart-statusbar)](https://david-dm.org/irohitb/react-native-smart-statusbar) [![Peer dependencies](https://img.shields.io/david/peer/irohitb/react-native-smart-statusbar)](https://david-dm.org/irohitb/react-native-smart-statusbar)|
+| Package | [![npm package version](https://img.shields.io/npm/v/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar) [![npm downloads](https://img.shields.io/npm/dt/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar)
 
 React Native Provides with Certain Api's whose scope is limited to either iOS or Android. With React-Native-Smart-Status-Bar we try to make status bar consistent across both Android iOS. 
 
