@@ -3,7 +3,7 @@
 |  | Status |
 | - | - |
 | Dependencies | [![Dependencies](https://img.shields.io/david/blendtale/react-native-smart-statusbar)](https://david-dm.org/blendtale/react-native-smart-statusbar) [![Dev dependencies](https://img.shields.io/david/dev/blendtale/react-native-smart-statusbar)](https://david-dm.org/blendtale/react-native-smart-statusbar) [![Peer dependencies](https://img.shields.io/david/peer/blendtale/react-native-smart-statusbar)](https://david-dm.org/blendtale/react-native-smart-statusbar)|
-| Package | [![npm package version](https://img.shields.io/npm/v/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar) [![npm downloads](https://img.shields.io/npm/dt/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar)
+| Package | [![npm package version](https://img.shields.io/npm/v/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar) [![npm downloads](https://img.shields.io/npm/dt/react-native-smart-statusbar)](https://www.npmjs.com/package/react-native-smart-statusbar) ![Type definitions](https://img.shields.io/badge/types-TypeScript-blue.svg)
 
 React Native Provides with Certain Api's whose scope is limited to either iOS or Android. With React-Native-Smart-Status-Bar we try to make status bar consistent across both Android iOS. 
 
