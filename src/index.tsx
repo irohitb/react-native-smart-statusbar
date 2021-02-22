@@ -1,6 +1,12 @@
 import * as React from 'react';
 import DeviceInfo from 'react-native-device-info';
-import { View, StatusBarProps, Platform, Dimensions } from 'react-native';
+import {
+  View,
+  StatusBarProps,
+  StatusBar,
+  Platform,
+  Dimensions,
+} from 'react-native';
 
 interface Props {
   statusBarHiddenForNotch: boolean;
