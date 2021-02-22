@@ -77,6 +77,8 @@ const SafeAreaDecider = ({
         hidden={statusBarHiddenForNonNotch}
       />
     );
+  } else {
+    return null;
   }
 };
 
