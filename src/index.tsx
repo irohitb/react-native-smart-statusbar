@@ -1,6 +1,6 @@
 import * as React from 'react';
 import DeviceInfo from 'react-native-device-info';
-import { View, StatusBar, Platform, Dimensions } from 'react-native';
+import { View, StatusBarProps, Platform, Dimensions } from 'react-native';
 
 interface Props {
   statusBarHiddenForNotch: boolean;
@@ -17,7 +17,7 @@ const SafeAreaDecider = ({
   statusBarHiddenForNonNotch = false,
   backgroundColor,
   ...rest
-}: Props & StatusBar) => {
+}: Props & StatusBarProps) => {
   const [state, setState] = React.useState<Istate>({
     navbarHeight: null,
     deviceHaveNotch: false,
