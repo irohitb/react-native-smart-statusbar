@@ -5,5 +5,5 @@ interface Props {
     statusBarHiddenForNonNotch: boolean;
     backgroundColor?: string;
 }
-declare const SafeAreaDecider: ({ statusBarHiddenForNotch, statusBarHiddenForNonNotch, backgroundColor, ...rest }: Props & StatusBar) => JSX.Element | undefined;
+declare const SafeAreaDecider: ({ statusBarHiddenForNotch, statusBarHiddenForNonNotch, backgroundColor, ...rest }: Props & StatusBar) => JSX.Element | null;
 export default SafeAreaDecider;
