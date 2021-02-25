@@ -8,7 +8,7 @@ import {
   Dimensions,
 } from 'react-native';
 
-interface Props {
+export interface SafeAreaDeciderProps {
   statusBarHiddenForNotch: boolean;
   statusBarHiddenForNonNotch: boolean;
   backgroundColor?: string;
@@ -23,7 +23,7 @@ const SafeAreaDecider = ({
   statusBarHiddenForNonNotch = false,
   backgroundColor,
   ...rest
-}: Props & StatusBarProps) => {
+}: SafeAreaDeciderProps & StatusBarProps) => {
   const [state, setState] = React.useState<Istate>({
     navbarHeight: null,
     deviceHaveNotch: false,

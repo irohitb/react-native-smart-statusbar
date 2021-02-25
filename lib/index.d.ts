@@ -1,9 +1,9 @@
 /// <reference types="react" />
 import { StatusBarProps } from 'react-native';
-interface Props {
+export interface SafeAreaDeciderProps {
     statusBarHiddenForNotch: boolean;
     statusBarHiddenForNonNotch: boolean;
     backgroundColor?: string;
 }
-declare const SafeAreaDecider: ({ statusBarHiddenForNotch, statusBarHiddenForNonNotch, backgroundColor, ...rest }: Props & StatusBarProps) => JSX.Element | null;
+declare const SafeAreaDecider: ({ statusBarHiddenForNotch, statusBarHiddenForNonNotch, backgroundColor, ...rest }: SafeAreaDeciderProps & StatusBarProps) => JSX.Element | null;
 export default SafeAreaDecider;
