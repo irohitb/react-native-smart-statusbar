@@ -39,7 +39,7 @@
     "url": "https://github.com/irohitb/react-native-smart-statusbar/issues"
   },
   "devDependencies": {
-    "@types/react-native": "^0.63.48",
+    "@types/react-native": "^0.64.2",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.10",
     "prettier": "^2.0.5",
