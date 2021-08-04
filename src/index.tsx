@@ -15,7 +15,7 @@ export interface SafeAreaDeciderProps {
 }
 
 interface Istate {
-  navbarHeight?: number | null; //StatusBar.currentHeight gives undefined
+  navbarHeight?: number | ''; //StatusBar.currentHeight gives undefined
   deviceHaveNotch: boolean;
 }
 const SafeAreaDecider = ({
@@ -25,7 +25,7 @@ const SafeAreaDecider = ({
   ...rest
 }: SafeAreaDeciderProps & StatusBarProps) => {
   const [state, setState] = React.useState<Istate>({
-    navbarHeight: null,
+    navbarHeight: '',
     deviceHaveNotch: false,
   });
 
@@ -56,7 +56,7 @@ const SafeAreaDecider = ({
     return (
       <View
         style={{
-          height: `${navbarHeight || null}`,
+          height: navbarHeight || '',
           backgroundColor: backgroundColor,
           width: Dimensions.get('window').width,
         }}
